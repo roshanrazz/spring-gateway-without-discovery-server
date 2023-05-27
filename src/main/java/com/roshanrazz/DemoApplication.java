@@ -7,6 +7,7 @@ import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
+@CrossOrigin(origins="https://pms-dc2u.onrender.com")
 public class DemoApplication {
 
 	public static void main(String[] args) {
@@ -22,23 +23,31 @@ public class DemoApplication {
 	                
 	                .route(r -> r.path("/appointment-service/**")
 	                		.filters(f -> f.rewritePath("/appointment-service/(?<remaining>.*)", "/api/v1/${remaining}"))
-	                        .uri("http://localhost:9003"))
+	                        .uri("http://129.146.132.231:9003"))
 	                
 	                .route(r -> r.path("/authentication-service/**")
 	                		.filters(f -> f.rewritePath("/authentication-service/(?<remaining>.*)", "/api/v1/${remaining}"))
-	                        .uri("http://localhost:9004"))
+	                        .uri("http://129.146.132.231:9004"))
 	                
 	                .route(r -> r.path("/patient-info-service/**")
 	                		.filters(f -> f.rewritePath("/patient-info-service/(?<remaining>.*)", "/api/v1/${remaining}"))
-	                        .uri("http://localhost:9005"))
+	                        .uri("http://129.146.132.231:9005"))
 	                
 	                .route(r -> r.path("/health-record-service/**")
 	                		.filters(f -> f.rewritePath("/health-record-service/(?<remaining>.*)", "/api/v1/${remaining}"))
-	                        .uri("http://localhost:9006"))
+	                        .uri("http://129.146.132.231:9006"))
 	                
 	                .route(r -> r.path("/physician-availability-service/**")
 	                		.filters(f -> f.rewritePath("/physician-availability-service/(?<remaining>.*)", "/api/v1/${remaining}"))
-	                        .uri("http://localhost:9007"))
+	                        .uri("http://129.146.132.231:9007"))
+	                
+	                .route(r -> r.path("/notification-service/**")
+	                		.filters(f -> f.rewritePath("/notification-service/(?<remaining>.*)", "/api/v1/${remaining}"))
+	                        .uri("http://129.146.132.231:9008"))
+	                
+	                .route(r -> r.path("/auth0-service/**")
+	                		.filters(f -> f.rewritePath("/auth0-service/(?<remaining>.*)", "/api/v1/${remaining}"))
+	                        .uri("http://129.146.132.231:9009"))
 	                
 	                .build();
 	    }
