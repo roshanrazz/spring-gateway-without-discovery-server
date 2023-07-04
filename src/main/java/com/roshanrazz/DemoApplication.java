@@ -7,7 +7,7 @@ import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-@CrossOrigin(origins="https://pms-dc2u.onrender.com")
+@CrossOrigin(origins="*")
 public class DemoApplication {
 
 	public static void main(String[] args) {
