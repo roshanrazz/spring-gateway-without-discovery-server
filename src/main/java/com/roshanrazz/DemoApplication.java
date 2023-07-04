@@ -7,7 +7,6 @@ import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class DemoApplication {
 
 	public static void main(String[] args) {
