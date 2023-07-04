@@ -6,5 +6,6 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
+            allowedOrigins: "https://pms-dc2u.onrender.com/"
             allowedHeaders: "*"
             allowedMethods: "*"
