@@ -6,6 +6,5 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "https://spring-gateway.onrender.com"
             allowedHeaders: "*"
             allowedMethods: "*"
